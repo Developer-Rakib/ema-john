@@ -1,0 +1,19 @@
+.shop-container{
+    display: flex;
+    
+}
+.products-container {
+	width: 75%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin-top: 80px;
+}
+.orderSummary-container{
+    width: 25%;
+    background: rgba(255, 153, 0, 0.3);
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    border-radius: 15px;
+}
