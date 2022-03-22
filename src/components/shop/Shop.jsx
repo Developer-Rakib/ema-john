@@ -31,7 +31,7 @@ const Shop = () => {
             </div>
             <div className="orderSummary-container">
                 <h3>Order Summary</h3>
-                <h5>Selected Item: {cartItem.length}</h5>
+                <h4>Selected Item: {cartItem.length}</h4>
             </div>
         </div>
     );
