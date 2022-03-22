@@ -2,7 +2,6 @@ import React from 'react';
 import './Product.css';
 
 const Product = (props) => {
-    // console.log(props.orderSummery);
     let { id, img, name, price, quantity, ratings, seller, stock, category } = props.product;
     return (
         <div className='product-container'>
