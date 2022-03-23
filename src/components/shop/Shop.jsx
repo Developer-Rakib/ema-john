@@ -12,7 +12,6 @@ const Shop = () => {
         fetch('https://raw.githubusercontent.com/ProgrammingHero1/ema-john-resources/main/fakeData/products.json')
             .then(res => res.json())
             .then(data => setProducts(data))
-
     }, [])
     useEffect(() => {
         let getData = getDataFromStore();
