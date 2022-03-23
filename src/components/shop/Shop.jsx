@@ -1,5 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react'
+import { addtoLocalStore, getDataFromStore } from '../../utilities/Storage';
+import Cart from '../cart/Cart';
 import Product from '../product/Product';
 import './Shop.css';
 
@@ -12,9 +14,27 @@ const Shop = () => {
             .then(data => setProducts(data))
 
     }, [])
+    useEffect(() => {
+        let getData = getDataFromStore();
+        let savedCart = [];
+        for (const id in getData) {
+            let addedItem = products.find(product => product.id === id);
+            if (addedItem) {
+                let quantity = getData[id];
+                addedItem.quantity = quantity;
+                savedCart.push(addedItem)
+            }
+        }
+        setCartItem(savedCart)
+    }, [products])
     const orderSummery = (product) => {
+
+
+
         let newCartItem = [...cartItem, product]
-        setCartItem(newCartItem)
+        setCartItem(newCartItem);
+        addtoLocalStore(product.id);
+
     }
 
     return (
@@ -29,11 +49,11 @@ const Shop = () => {
                 }
             </div>
             <div className="orderSummary-container">
-                <h3>Order Summary</h3>
-                <h4>Selected Item: {cartItem.length}</h4>
+                <Cart data={cartItem}></Cart>
             </div>
         </div>
     );
 };
+
 
 export default Shop;
