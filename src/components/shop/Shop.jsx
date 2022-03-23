@@ -45,7 +45,6 @@ const Shop = () => {
         addtoLocalStore(selectedProduct.id);
 
     }
-    console.log(cartItem);
 
     return (
         <div className='shop-container'>
