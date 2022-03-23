@@ -27,15 +27,25 @@ const Shop = () => {
         }
         setCartItem(savedCart)
     }, [products])
-    const orderSummery = (product) => {
+    const orderSummery = (selectedProduct) => {
+        let newCartItem = [];
+        let exist = cartItem.find(product => product.id === selectedProduct.id)
+        if (!exist) {
+            selectedProduct.quantity = 1;
+            newCartItem = [...cartItem, selectedProduct]
+
+        } else {
+            const rest = cartItem.filter(product => product.id !== selectedProduct.id);
+            exist.quantity = exist.quantity + 1;
+            newCartItem = [...rest, exist]
+        }
 
 
-
-        let newCartItem = [...cartItem, product]
         setCartItem(newCartItem);
-        addtoLocalStore(product.id);
+        addtoLocalStore(selectedProduct.id);
 
     }
+    console.log(cartItem);
 
     return (
         <div className='shop-container'>
