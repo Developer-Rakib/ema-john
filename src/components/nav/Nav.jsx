@@ -7,7 +7,8 @@ const Nav = () => {
         <div className='nav-container'>
             <img src={logo} alt="" />
             <div>
-                <a href="/home">Home</a>
+                <a href="/">Home</a>
+                <a href="/shop">Shop</a>
                 <a href="/order">Order</a>
                 <a href="/orderInventory">Order Inventory</a>
             </div>
