@@ -26,6 +26,7 @@ const Shop = () => {
         }
         setCartItem(savedCart)
     }, [products])
+
     const orderSummery = (selectedProduct) => {
         let newCartItem = [];
         let exist = cartItem.find(product => product.id === selectedProduct.id)
