@@ -13,7 +13,6 @@ const Cart = ({ data }) => {
     let tax = (totalPrice * 0.05).toFixed(2);
     let grandTotal = totalPrice + totalShipping + parseFloat(tax);
 
-
     return (
         <div className='cart-container'>
             <h3>Order Summary</h3>
