@@ -13,7 +13,6 @@ const Order = () => {
         let restCartItems = cartItems.filter(cartItem => cartItem.id !== item.id);
         setCartItems(restCartItems)
         removeFromLocalStore(item.id)
-
     }
     return (
         <div className='shop-container'>
