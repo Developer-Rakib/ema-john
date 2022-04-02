@@ -35,7 +35,7 @@ function getDataFromStore() {
 }
 
 function removeFromLocalStore(id) {
-    let getItem = localStorage.getItem("data");
+    let getItem = localStorage.getItem("cartItem");
     if (getItem) {
         let data = JSON.parse(getItem);
         if (id in data) {

@@ -1,0 +1,36 @@
+.order-container {
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+    color: #787885;
+    display: flex;
+    justify-content: space-between;
+    text-align: start;
+    margin: 10px 0;
+    border-radius: 8px;
+     
+}
+.delete-icon {
+	margin: auto 0;
+	font-size: 30px;
+	padding: 0 29px;
+    cursor: pointer;
+}
+.order-container img {
+	width: 85px;
+	padding: 5px;
+	border-radius: 8px;
+}
+.order-info{
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.order-info h4{
+    margin: 8px;
+}
+.order-info h3{
+    margin: 8px;
+}
+.order-info span{
+   color: yellowgreen;
+}
