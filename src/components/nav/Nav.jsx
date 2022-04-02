@@ -4,7 +4,6 @@ import CustomLink from '../cusmtomLink/CustomLink';
 import './Nav.css'
 
 
-
 const Nav = () => {
     return (
         <div className='nav-container'>

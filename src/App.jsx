@@ -7,7 +7,6 @@ import OrderInventory from './components/orderInventory/OrderInventory';
 import Shop from './components/shop/Shop';
 
 function App() {
-
   return (
     <div className="App">
       <Nav></Nav>
