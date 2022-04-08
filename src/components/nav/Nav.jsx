@@ -37,7 +37,7 @@ const Nav = () => {
                     </div>
                     {
                         Object.keys(userDetails).length == 0 || <div className='user'>
-                            <img src={userDetails.photoUR ? userDetails.photoUR : "https://www.placidsoftware.com/assets/images/user-img.png"} alt="" />
+                            <img src={userDetails.photoURL ? userDetails.photoURL : "https://www.placidsoftware.com/assets/images/user-img.png"} alt="" />
                             <p>{userDetails.displayName}</p>
                             <CustomLink onClick={hndleLogOut} to={"/Signin"}>Log Out</CustomLink>
                         </div>
