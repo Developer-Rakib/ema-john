@@ -1,4 +1,4 @@
-.nav-container{
+.nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -7,11 +7,34 @@
     height: 70px;
     padding: 0 100px;
 }
-.nav-container a{
+
+.nav-container a {
     text-decoration: none;
     color: white;
     margin: 0 15px;
     font-size: 17px;
     font-weight: 400;
 
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.user img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.user p {
+    margin: 0 8px;
+    font-size: 14px;
+}
+
+.user a {
+    font-size: 14px;
+    color: rgb(171, 171, 245) !important;
 }

@@ -15,7 +15,7 @@ const OrderOverview = ({ cartItem, singleItemDelete }) => {
                 <h4>Shipping Cost: <span>{shipping}</span></h4>
                 <h4>Quantity: <span>{quantity}</span></h4>
             </div>
-            <MdDelete onClick={() => singleItemDelete(cartItem)} className='delete-icon'></MdDelete>
+            <MdDelete onClick={() => singleItemDelete(cartItem)} className='delete-icon'>d</MdDelete>
 
         </div>
     );

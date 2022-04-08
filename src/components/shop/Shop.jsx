@@ -11,19 +11,6 @@ const Shop = () => {
     let [products, setProducts] = useProduct();
     let [cartItem, setCartItem] = useCart(products);
 
-    // useEffect(() => {
-    //     let getData = getDataFromStore();
-    //     let savedCart = [];
-    //     for (const id in getData) {
-    //         let addedItem = products.find(product => product.id === id);
-    //         if (addedItem) {
-    //             let quantity = getData[id];
-    //             addedItem.quantity = quantity;
-    //             savedCart.push(addedItem)
-    //         }
-    //     }
-    //     setCartItem(savedCart)
-    // }, [products])
 
     const orderSummery = (selectedProduct) => {
         let newCartItem = [];
