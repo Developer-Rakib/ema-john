@@ -10,6 +10,7 @@ import { auth } from '../../firebase.init';
 const SingIn = () => {
     let [email, setEmail] = useState('')
     let [pass, setPass] = useState('')
+    let [error, setError] = useState('')
     let navigat = useNavigate();
     let [userDetails, setUserDetails] = useContext(UserDetailsContext);
 
@@ -25,7 +26,7 @@ const SingIn = () => {
             })
             .catch((error) => {
                 const errorMessage = error.message;
-                console.log(errorMessage);
+                setError(errorMessage)
             });
         e.preventDefault()
     }
@@ -59,6 +60,7 @@ const SingIn = () => {
                             <p>Forgot assword? <a href="">Click Here</a></p>
                             <p>Dont have an account ? <Link to={"/Signup"}>Sign Up</Link></p>
                         </form>
+                        <p style={{ color: 'red' }}>{error}</p>
                         <DirectSignIn></DirectSignIn>
                     </div>
 

@@ -30,13 +30,13 @@ const SignUp = () => {
                 }).catch((error) => {
                     // An error occurred
                     console.log(error.message);
-                    setError(error)
+                    setError(error.message)
                 });
             })
             .catch((error) => {
                 const errorMessage = error.message;
                 console.log(errorMessage);
-                setError(error)
+                setError(errorMessage)
             });
 
         e.preventDefault()
@@ -54,6 +54,7 @@ const SignUp = () => {
     const handleName = (e) => {
         setName(e.target.value)
     }
+    console.log(error);
     return (
         <div className='SignIn-container'>
             <div className="SignIn">
