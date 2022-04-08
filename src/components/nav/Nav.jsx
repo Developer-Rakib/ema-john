@@ -24,10 +24,10 @@ const Nav = () => {
     return (
         <>
             {
-                rout.includes('Sign') || <div className='nav-container'>
+                (rout.includes('Sign') || rout.endsWith("/")) || <div className='nav-container'>
                     <img src={logo} alt="" />
                     <div>
-                        <CustomLink to={"/"}>Home</CustomLink>
+                        <CustomLink to={"/home"}>Home</CustomLink>
                         <CustomLink to={"/shop"}>Shop</CustomLink>
                         <CustomLink to={"/order"}>Order</CustomLink>
                         {
