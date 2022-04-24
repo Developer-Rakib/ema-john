@@ -7,7 +7,7 @@ import OrderOverview from '../orderOverview/OrderOverview';
 
 const Order = () => {
     let [products, setProducts] = useProduct();
-    let [cartItems, setCartItems] = useCart(products);
+    let [cartItems, setCartItems] = useCart();
 
     const singleItemDelete = (item) => {
         let restCartItems = cartItems.filter(cartItem => cartItem._id !== item._id);

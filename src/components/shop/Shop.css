@@ -4,8 +4,12 @@
 
 }
 
-.products-container {
+.products-section {
     width: 75%;
+}
+
+.products-container {
+    /* width: 75%; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -20,4 +24,28 @@
     top: 0;
     border-radius: 8px;
 
+}
+
+.page-btn {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.page-btn button,
+select {
+    padding: 1px 8px;
+    margin: 10px;
+    background: white;
+    border: 1px solid;
+    border-radius: 3px;
+    color: rgba(255, 153, 0, 1);
+}
+
+.page-btn .selected {
+    padding: 1px 8px;
+    margin: 10px;
+    background: rgba(255, 153, 0, 1);
+    border: 1px solid;
+    border-radius: 5px;
+    color: white;
 }
