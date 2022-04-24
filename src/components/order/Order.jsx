@@ -10,16 +10,16 @@ const Order = () => {
     let [cartItems, setCartItems] = useCart(products);
 
     const singleItemDelete = (item) => {
-        let restCartItems = cartItems.filter(cartItem => cartItem.id !== item.id);
+        let restCartItems = cartItems.filter(cartItem => cartItem._id !== item._id);
         setCartItems(restCartItems)
-        removeFromLocalStore(item.id)
+        removeFromLocalStore(item._id)
     }
     return (
         <div className='shop-container'>
             <div className="" style={{ width: '70%', padding: '50px 100px' }}>
                 {
                     cartItems.map(cartItem => <OrderOverview
-                        key={cartItem.id}
+                        key={cartItem._id}
                         cartItem={cartItem}
                         singleItemDelete={singleItemDelete}
                     ></OrderOverview>)

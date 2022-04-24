@@ -14,20 +14,18 @@ const Shop = () => {
 
     const orderSummery = (selectedProduct) => {
         let newCartItem = [];
-        let exist = cartItem.find(product => product.id === selectedProduct.id)
+        let exist = cartItem.find(product => product._id === selectedProduct._id)
         if (!exist) {
             selectedProduct.quantity = 1;
             newCartItem = [...cartItem, selectedProduct]
 
         } else {
-            const rest = cartItem.filter(product => product.id !== selectedProduct.id);
+            const rest = cartItem.filter(product => product._id !== selectedProduct._id);
             exist.quantity = exist.quantity + 1;
             newCartItem = [...rest, exist]
         }
-
-
         setCartItem(newCartItem);
-        addtoLocalStore(selectedProduct.id);
+        addtoLocalStore(selectedProduct._id);
 
     }
 
@@ -36,7 +34,7 @@ const Shop = () => {
             <div className="products-container">
                 {
                     products.map(product => <Product
-                        key={product.id}
+                        key={product._id}
                         product={product}
                         orderSummery={orderSummery}
                     ></Product>)

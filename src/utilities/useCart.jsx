@@ -8,7 +8,7 @@ const useCart = (products) => {
         let getData = getDataFromStore();
         let sevedCart = [];
         for (const id in getData) {
-            let addedItem = products.find(product => product.id === id);
+            let addedItem = products.find(product => product._id === id);
             if (addedItem) {
                 let quantity = getData[id];
                 addedItem.quantity = quantity;
