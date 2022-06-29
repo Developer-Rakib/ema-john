@@ -31,7 +31,6 @@ const useCart = () => {
             })
     }, [])
 
-
     return [cartItem, setCartItem]
 }
 export default useCart;
