@@ -17,7 +17,7 @@ const useCart = () => {
         })
             .then(res => res.json())
             .then(products => {
-                console.log(products)
+
                 let sevedCart = [];
                 for (const id in getData) {
                     let addedItem = products.find(product => product._id === id);
