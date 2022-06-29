@@ -4,7 +4,6 @@ import { getDataFromStore } from "./Storage"
 const useCart = () => {
     let [cartItem, setCartItem] = useState([]);
 
-
     useEffect(() => {
         let getData = getDataFromStore();
         let key = Object.keys(getData)
